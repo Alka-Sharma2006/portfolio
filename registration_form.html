@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form - Pure HTML Only</title>
+</head>
+<body>
+
+    <!-- Main Heading for the Page -->
+    <h1>Student Registration & Portfolio Form</h1>
+    <p>This project demonstrates the use of pure HTML form elements and attributes.</p>
+    <hr>
+
+    <!-- 
+        The <form> tag is the container for all form elements. 
+        - 'action' attribute: defines where to send the form data (placeholder # used here).
+        - 'method' attribute: defines the HTTP method (usually "post" for registration).
+    -->
+    <form action="#" method="post">
+
+        <!-- Section 1: Personal Details -->
+        <!-- <fieldset> is used to group related elements together -->
+        <fieldset>
+            <!-- <legend> provides a caption for the group -->
+            <legend><b>Personal Information</b></legend>
+
+            <!-- <label> connects the text to the input field using the 'for' attribute -->
+            <label for="full-name">Full Name:</label><br>
+            <!-- <input type="text"> is for single-line text -->
+            <input type="text" id="full-name" name="user_name" placeholder="Enter your full name" required><br><br>
+
+            <label for="user-email">Email Address:</label><br>
+            <!-- <input type="email"> validates that the text is an email format -->
+            <input type="email" id="user-email" name="user_email" placeholder="example@mail.com" required><br><br>
+
+            <label for="user-password">Password:</label><br>
+            <!-- <input type="password"> masks the characters for security -->
+            <input type="password" id="user-password" name="user_password" placeholder="Create a password" required><br><br>
+
+            <label for="user-phone">Phone Number (Tel):</label><br>
+            <!-- <input type="tel"> is used for telephone numbers -->
+            <input type="tel" id="user-phone" name="user_phone" placeholder="123-456-7890"><br><br>
+
+            <label for="user-age">Age (Number):</label><br>
+            <!-- <input type="number"> allows only numeric input -->
+            <input type="number" id="user-age" name="user_age" value="18" min="1" max="120"><br><br>
+
+            <label for="user-url">Portfolio URL:</label><br>
+            <!-- <input type="url"> validates that the text is a web address -->
+            <input type="url" id="user-url" name="user_website" placeholder="https://yourportfolio.com"><br><br>
+
+            <label for="search-interest">Search Interests:</label><br>
+            <!-- <input type="search"> is used for search queries -->
+            <input type="search" id="search-interest" name="search_interest" placeholder="Search topics..."><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Section 2: Identity and Skills -->
+        <fieldset>
+            <legend><b>Identity and Skills</b></legend>
+
+            <label>Gender:</label><br>
+            <!-- <input type="radio"> allows selecting only one option from a group (same name) -->
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <br><br>
+
+            <label>Skills (Checkboxes):</label><br>
+            <!-- <input type="checkbox"> allows selecting multiple options -->
+            <input type="checkbox" id="skill1" name="skills" value="html">
+            <label for="skill1">HTML</label>
+            
+            <input type="checkbox" id="skill2" name="skills" value="css">
+            <label for="skill2">CSS</label>
+            
+            <input type="checkbox" id="skill3" name="skills" value="js">
+            <label for="skill3">JavaScript</label>
+            
+            <input type="checkbox" id="skill4" name="skills" value="python">
+            <label for="skill4">Python</label>
+            <br><br>
+
+            <label for="profile-color">Choose Profile Theme Color:</label><br>
+            <!-- <input type="color"> provides a color picker -->
+            <input type="color" id="profile-color" name="fav_color" value="#0000ff"><br><br>
+
+            <label for="resume-upload">Upload Resume (File):</label><br>
+            <!-- <input type="file"> allows the user to select a file -->
+            <input type="file" id="resume-upload" name="user_file"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Section 3: Course Selection and Feedback -->
+        <fieldset>
+            <legend><b>Course and Preferences</b></legend>
+
+            <label for="course-select">Choose a Course:</label><br>
+            <!-- <select> creates a dropdown menu -->
+            <select id="course-select" name="user_course" required>
+                <!-- <option> defines the choices in the dropdown -->
+                <option value="">-- Please choose an option --</option>
+                <option value="web-dev">Web Development</option>
+                <option value="data-science">Data Science</option>
+                <option value="app-dev">App Development</option>
+                <option value="graphic-design">Graphic Design</option>
+            </select><br><br>
+
+            <label for="registration-date">Registration Date:</label><br>
+            <!-- <input type="date"> provides a date picker -->
+            <input type="date" id="registration-date" name="reg_date"><br><br>
+
+            <label for="appointment-time">Preferred Appointment Time:</label><br>
+            <!-- <input type="time"> provides a time picker -->
+            <input type="time" id="appointment-time" name="app_time"><br><br>
+
+            <label for="experience-level">Self-Rating (Range):</label><br>
+            <!-- <input type="range"> provides a slider control -->
+            <span>0</span>
+            <input type="range" id="experience-level" name="exp_level" min="0" max="100" value="50">
+            <span>100</span>
+            <br><br>
+
+            <label for="user-feedback">Feedback / About Yourself:</label><br>
+            <!-- <textarea> is for multi-line text input -->
+            <textarea id="user-feedback" name="user_bio" rows="5" cols="40" placeholder="Tell us about yourself..."></textarea><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Section 4: Form Actions -->
+        <!-- <input type="submit"> sends the form data -->
+        <input type="submit" value="Submit Registration">
+
+        <!-- <input type="reset"> clears all fields in the form -->
+        <input type="reset" value="Reset Form">
+
+        <br><br>
+        
+        <!-- <button> is a generic button element -->
+        <button type="button">Help / Instructions</button>
+
+    </form>
+
+    <p><small>* Required fields must be filled out before submitting.</small></p>
+
+</body>
+</html>
